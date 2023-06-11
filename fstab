@@ -1,0 +1,12 @@
+proc            /proc           proc    defaults          0       0
+PARTUUID=6459eeaa-01  /boot           vfat    defaults          0       2
+PARTUUID=6459eeaa-02  /               ext4    defaults,noatime  0       1
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+# MOUNT PLEX
+# UUID=77CF-C5DA /mnt/plex vfat defaults,auto,uid=995,umask=002 0 2 
+UUID=77CF-C5DA /mnt/plex vfat defaults,uid=995,gid=1000,fmask=0011,dmask=0000 0 0
+
+
+uid = 995 = plex 
+gid = 1000 = pi
