@@ -1,0 +1,15 @@
+proc            /proc           proc    defaults          0       0
+/dev/mmcblk0p6  /boot           vfat    defaults          0       2
+/dev/mmcblk0p7  /               ext4    defaults,noatime  0       1
+# a swapfile is not a swap partition, no line here
+#   use  dphys-swapfile swap[on|off]  for that
+# MOUNT System at /disks/System for Plex.
+UUID=77CF-C5DA /mnt/library vfat defaults,auto,uid=1000,gid=1000,umask=002 0 2
+
+
+
+/dev/mmcblk0p1: LABEL="boot" UUID="16D2-035F" TYPE="vfat" PARTUUID="033a7e7e-01"
+/dev/mmcblk0p2: LABEL="rootfs" UUID="d065e631-6b9d-48c0-a8fe-e663b42828e0" TYPE="ext4" PARTUUID="033a7e7e-02"
+/dev/mmcblk0: PTUUID="033a7e7e" PTTYPE="dos"
+/dev/sda1: LABEL="System" UUID="77CF-C5DA" TYPE="vfat" PARTUUID="aa713c32-01"
+
